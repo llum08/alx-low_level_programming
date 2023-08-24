@@ -1,29 +1,32 @@
-/*
-- File: 3-print_alphabets.c
-- Auth: llum08
-*/
 #include <stdio.h>
-/*
-- main - prints the alphabet in lowercase, and then in uppercase.
-- 
-- Return: Always 0.
+
+/**
+ * main - Entry point
+ *
+ * Description: print alphabet in lowercase then in uppercase
+ *
+ * Return: Always 0 (Success)
 */
 
 int main(void)
 {
-char letter;
+	char ch = 'a';
+	char CH = 'A';
 
-```
-for (letter = 'a' ; letter <= 'z' ; letter++)
-	putchar(letter);
+	/*prints a - z*/
+	while (ch <= 'z')
+	{
+		putchar(ch);
+		++ch;
+	}
 
-for (letter = 'A' ; letter <= 'Z' ; letter++)
-	putchar(letter);
+	/*print A - Z*/
+	while (CH <= 'Z')
+	{
+		putchar(CH);
+		++CH;
+	}
+	putchar('\n');
 
-putchar('\\n');
-
-return (0);
-
-```
-
+	return (0);
 }

@@ -1,34 +1,27 @@
-/*
+#include<stdio.h>
 
-- File: 9-print_comb.c
-- Auth: llum08
+/**
+ * main - Entry point
+ *
+ * Description: print numbers of base16 in lowercase
+ *
+ * Return: Always 0 (Success)
 */
-#include <stdio.h>
-/*
-- main - prints all possible combinations of single-digit numbers
-- 
-- Return: Always 0.
-*/
+
 int main(void)
 {
-int num;
-    
-    for (num = 0; num <= 9; num++)
-    {
-    putchar((num % 10) + '0');
-    if (num == 9)
-    continue;
-    
-    ```
-     putchar(',');
-     putchar(' ');
-    
-    ```
-    
-    }
-    putchar('\n');
-    
-    return (0);
-    
+	int digit = 48; /*48; decimal rep of 0*/
 
+	while (digit <= 102) /*102; decimal rep of f*/
+	{
+		putchar(digit);
+
+		/* after 9 we jump till 96; `*/
+		if (digit == 57)
+			digit += 39;
+		++digit;
+	}
+	putchar('\n');
+
+	return (0);
 }
